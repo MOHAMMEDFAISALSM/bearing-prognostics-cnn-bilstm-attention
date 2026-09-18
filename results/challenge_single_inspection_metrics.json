@@ -1,0 +1,11 @@
+{
+  "Protocol": "IEEE PHM 2012 Prognostic Challenge (Single-Inspection Point)",
+  "Total_Bearings_Evaluated": 11,
+  "Official_Challenge_Score_All_11_Physical": 0.07184545454545455,
+  "Official_Challenge_Score_All_11_Literal": 0.023363636363636364,
+  "Official_Challenge_Score_3_Bearings": 0.03746666666666667,
+  "Single_Inspection_RUL_MAE_minutes_11": 68.60000000000001,
+  "Single_Inspection_RUL_RMSE_minutes_11": 80.60972916691655,
+  "Single_Inspection_RUL_MAE_minutes_3": 59.75333333333333,
+  "Scoring_Equation": "Score = (1/N) * sum(A_i), A_i = exp(-ln(0.5)*(Er_i/5)) if Er_i<=0 else exp(ln(0.5)*(Er_i/20))"
+}

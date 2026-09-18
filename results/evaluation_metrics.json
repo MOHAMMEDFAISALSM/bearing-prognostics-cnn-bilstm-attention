@@ -1,0 +1,13 @@
+{
+  "RUL_MAE_seconds": 6264.376186199424,
+  "RUL_MAE_minutes": 104.4062697699904,
+  "RUL_RMSE_seconds": 7326.129825154057,
+  "RUL_RMSE_minutes": 122.1021637525676,
+  "RUL_MAE_normalized": 0.3726133704185486,
+  "Trajectory_Averaged_PHM_Score": 0.12443881130746084,
+  "Risk_Accuracy": 0.501589319771138,
+  "Risk_Weighted_Precision": 0.4743909700055066,
+  "Risk_Weighted_Recall": 0.501589319771138,
+  "Risk_Weighted_F1": 0.48455657934462015,
+  "Risk_Macro_F1": 0.3312441788040407
+}

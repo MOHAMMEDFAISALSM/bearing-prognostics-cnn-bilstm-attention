@@ -1,0 +1,23 @@
+{
+  "eq_cap": "RUL_{\\mathrm{cap}} = 0.60 \\times \\max_{b \\in \\mathcal{B}_{\\mathrm{train}}} T_{\\mathrm{EOL}}(b) = 16{,}812\\ \\mathrm{s}",
+  "eq_target": "RUL_{c}(t) = \\min\\left( RUL_{\\mathrm{cap}},\\ \\max\\left(0,\\ T_{\\mathrm{EOL}} - t\\right) \\right)",
+  "eq_ynorm": "y_{\\mathrm{rul}}(t) = \\frac{RUL_{c}(t)}{RUL_{\\mathrm{cap}}} \\in [0, 1]",
+  "eq_stage": "s(t) = \\begin{cases} 0\\ (\\text{Normal}), & y_{\\mathrm{rul}}(t) > 0.40 \\\\ 1\\ (\\text{Warning}), & 0.15 < y_{\\mathrm{rul}}(t) \\le 0.40 \\\\ 2\\ (\\text{Critical}), & y_{\\mathrm{rul}}(t) \\le 0.15 \\end{cases}",
+  "eq_rms": "\\begin{aligned} \\mathrm{RMS} &= \\sqrt{\\frac{1}{N} \\sum_{i=1}^{N} x_i^{2}} \\\\ \\mathrm{Kurt} &= \\frac{\\frac{1}{N} \\sum_{i=1}^{N} (x_i - \\mu)^{4}}{\\sigma^{4}} - 3 \\end{aligned}",
+  "eq_factors": "\\begin{aligned} \\mathrm{CF} &= \\frac{x_{\\mathrm{pk}}}{\\mathrm{RMS}}, \\quad \\mathrm{SF} = \\frac{\\mathrm{RMS}}{\\overline{|x|}}, \\quad \\mathrm{IF} = \\frac{x_{\\mathrm{pk}}}{\\overline{|x|}} \\\\ \\mathrm{MF} &= \\frac{x_{\\mathrm{pk}}}{\\left( \\frac{1}{N} \\sum_{i} \\sqrt{|x_i|} \\right)^{2}} \\end{aligned}",
+  "eq_spectral": "\\begin{aligned} f_c &= \\frac{\\sum_k f_k s_k}{\\sum_k s_k}, \\quad \\sigma_f = \\sqrt{\\frac{\\sum_k (f_k - f_c)^{2} s_k}{\\sum_k s_k}} \\\\ \\mathrm{RMSF} &= \\sqrt{\\frac{\\sum_k f_k^{2} s_k}{\\sum_k s_k}} \\end{aligned}",
+  "eq_window": "\\begin{aligned} \\mathbf{X}_j &= \\left[ \\mathbf{z}_{j-15}, \\ldots, \\mathbf{z}_{j} \\right] \\in \\mathbb{R}^{16 \\times 30} \\\\ \\mathbf{z}_k &= \\left( \\mathbf{f}_k - \\boldsymbol{\\mu}_{\\mathrm{train}} \\right) \\oslash \\boldsymbol{\\sigma}_{\\mathrm{train}} \\end{aligned}",
+  "eq_conv": "\\mathbf{H}^{(l)} = \\mathrm{Drop}\\left( \\mathrm{BN}\\left( \\mathrm{ReLU}\\left( \\mathbf{W}^{(l)} * \\mathbf{H}^{(l-1)} + \\mathbf{b}^{(l)} \\right) \\right) \\right)",
+  "eq_bilstm": "\\mathbf{h}_t = \\left[ \\overrightarrow{\\mathrm{LSTM}}\\left(\\mathbf{H}^{(2)}\\right)_t ;\\ \\overleftarrow{\\mathrm{LSTM}}\\left(\\mathbf{H}^{(2)}\\right)_t \\right] \\in \\mathbb{R}^{128}",
+  "eq_att": "\\begin{aligned} e_t &= \\mathbf{u}^{\\top} \\tanh\\left( \\mathbf{W}_a \\mathbf{h}_t + \\mathbf{b}_a \\right) \\\\ \\alpha_t &= \\frac{\\exp(e_t)}{\\sum_{k=1}^{16} \\exp(e_k)}, \\quad \\mathbf{c} = \\sum_{t=1}^{16} \\alpha_t \\mathbf{h}_t \\end{aligned}",
+  "eq_heads": "\\mathbf{g} = \\mathrm{ReLU}\\left( \\mathbf{W}_g \\mathbf{c} + \\mathbf{b}_g \\right)",
+  "eq_heads2": "\\begin{aligned} \\hat{y}_{\\mathrm{rul}} &= \\mathbf{w}_r^{\\top} \\phi_r(\\mathbf{g}) + b_r \\\\ \\hat{\\mathbf{p}} &= \\mathrm{softmax}\\left( \\mathbf{W}_s \\phi_s(\\mathbf{g}) + \\mathbf{b}_s \\right) \\end{aligned}",
+  "eq_loss": "\\mathcal{L} = \\frac{1.0}{B} \\sum_{j=1}^{B} \\ell_{\\delta}\\left( y_{\\mathrm{rul},j} - \\hat{y}_{\\mathrm{rul},j} \\right) + \\frac{0.5}{B} \\sum_{j=1}^{B} \\left( -\\log \\hat{p}_{j, s_j} \\right)",
+  "eq_huber": "\\ell_{\\delta}(r) = \\begin{cases} \\frac{1}{2} r^{2}, & |r| \\le \\delta \\\\ \\delta \\left( |r| - \\frac{1}{2}\\delta \\right), & |r| > \\delta \\end{cases} \\qquad (\\delta = 1)",
+  "eq_denorm": "\\widehat{RUL} = \\mathrm{clip}\\left( \\hat{y}_{\\mathrm{rul}}, 0, 1 \\right) \\times RUL_{\\mathrm{cap}}\\ \\ [\\mathrm{s}]",
+  "eq_mae": "\\mathrm{MAE} = \\frac{1}{M} \\sum_{i=1}^{M} \\left| RUL_{c,i} - \\widehat{RUL}_i \\right|",
+  "eq_rmse": "\\mathrm{RMSE} = \\sqrt{\\frac{1}{M} \\sum_{i=1}^{M} \\left( RUL_{c,i} - \\widehat{RUL}_i \\right)^{2}}",
+  "eq_er": "\\%Er_i = 100 \\times \\frac{ActRUL_i - \\widehat{RUL}_i}{ActRUL_i}",
+  "eq_ai": "A_i = \\begin{cases} \\exp\\left( -\\ln(0.5) \\cdot \\%Er_i / 5 \\right), & \\%Er_i \\le 0 \\\\ \\exp\\left( +\\ln(0.5) \\cdot \\%Er_i / 20 \\right), & \\%Er_i > 0 \\end{cases}",
+  "eq_score": "\\mathrm{Score} = \\frac{1}{11} \\sum_{i=1}^{11} A_i, \\qquad T\\text{-}\\mathrm{Score} = \\frac{1}{M} \\sum_{i=1}^{M} A_i"
+}

@@ -1,0 +1,18 @@
+{
+  "Total_Test_Bearings": 11,
+  "Total_Test_Snapshots": 17355,
+  "Total_Test_Sequences": 17190,
+  "RUL_MAE_seconds": 5603.870421214718,
+  "RUL_MAE_minutes": 93.39784035357863,
+  "RUL_RMSE_seconds": 6629.43101378889,
+  "RUL_RMSE_minutes": 110.4905168964815,
+  "RUL_MAE_normalized": 0.33332562582675235,
+  "Trajectory_Averaged_PHM_Score": 0.16670708724501485,
+  "Risk_Accuracy": 0.5281559045956952,
+  "Risk_Weighted_Precision": 0.5073240239781996,
+  "Risk_Weighted_Recall": 0.5281559045956952,
+  "Risk_Weighted_F1": 0.5160543120396328,
+  "Risk_Macro_Precision": 0.3967279306075593,
+  "Risk_Macro_Recall": 0.4126408523668605,
+  "Risk_Macro_F1": 0.4022435927247801
+}

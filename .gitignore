@@ -1,0 +1,224 @@
+# ==============================================================================
+# .gitignore for Academic Machine Learning & Prognostics Research Project
+# Project: Explainable Dual-Head CNN-BiLSTM-Attention Bearing Prognostics
+# Dataset Benchmark: PRONOSTIA / IEEE PHM 2012 Bearing Run-to-Failure
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. RAW DATASETS & LARGE BENCHMARK ARCHIVES
+# ------------------------------------------------------------------------------
+# Complete PRONOSTIA / IEEE PHM 2012 raw dataset directory (~3+ GB, 17,355 files)
+ieee-phm-2012-data-challenge-dataset-master/
+ieee-phm-2012-data-challenge-dataset-master/**
+*ieee-phm-2012*
+*ieee_phm_2012*
+*pronostia*
+*PRONOSTIA*
+
+# General raw data directories
+data/
+dataset/
+datasets/
+raw_data/
+raw-data/
+
+# Compressed dataset downloads and archive files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bz2
+*.xz
+
+# Raw telemetry dumps and binary matrix data
+*.mat
+*.bin
+*.raw
+
+# ------------------------------------------------------------------------------
+# 2. PYTHON COMPILED CODE & BYTECODE CACHE
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution, packaging, and build artifacts
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ------------------------------------------------------------------------------
+# 3. VIRTUAL ENVIRONMENTS & PACKAGE DIRECTORIES
+# ------------------------------------------------------------------------------
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+.conda/
+conda-env/
+pip-log.txt
+pip-delete-this-directory.txt
+.pip/
+
+# ------------------------------------------------------------------------------
+# 4. JUPYTER NOTEBOOKS CHECKPOINTS & CACHE
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*-checkpoint.ipynb
+.jupyter/
+
+# ------------------------------------------------------------------------------
+# 5. ML EXPERIMENT TRACKING & TRAINING RUNS
+# ------------------------------------------------------------------------------
+*.log
+logs/
+log/
+wandb/
+mlruns/
+lightning_logs/
+runs/
+tensorboard/
+
+# Intermediate checkpoints (preserve final models in models/)
+checkpoints/
+checkpoint/
+*.ckpt
+
+# ------------------------------------------------------------------------------
+# 6. IDE, CODE EDITORS & WORKSPACE SETTINGS
+# ------------------------------------------------------------------------------
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+*.iws
+*.iml
+out/
+
+# Sublime Text / Atom / Vim / Emacs
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+*.swp
+*.swo
+*~
+.#*
+
+# ------------------------------------------------------------------------------
+# 7. OPERATING SYSTEM & METADATA FILES
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ------------------------------------------------------------------------------
+# 8. SECRETS, CREDENTIALS & SENSITIVE CONFIGURATIONS
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+id_rsa*
+secrets.json
+credentials.json
+client_secret*.json
+
+# ------------------------------------------------------------------------------
+# 9. TESTING, COVERAGE & CODE QUALITY
+# ------------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# ------------------------------------------------------------------------------
+# 10. NODE & DOCUMENT BUILD ARTIFACTS
+# ------------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ------------------------------------------------------------------------------
+# 11. TEMPORARY & BACKUP ARTIFACTS
+# ------------------------------------------------------------------------------
+tmp/
+temp/
+scratch/
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# ------------------------------------------------------------------------------
+# 12. EXPLICIT REPRODUCIBILITY GUARANTEES (ACADEMIC ARTIFACTS)
+# ------------------------------------------------------------------------------
+# Ensure core research code, notebooks, and documentation are never omitted
+!*.py
+!*.js
+!*.ipynb
+!*.md
+
+# Ensure paper package, figures, and rendered assets are tracked
+!paper/
+!paper/**
+
+# Ensure empirical metrics, evaluation CSVs, and visualization figures are tracked
+!results/
+!results/**
+
+# Ensure frozen trained model weights, feature metadata, and scalers are tracked
+!models/
+!models/**
