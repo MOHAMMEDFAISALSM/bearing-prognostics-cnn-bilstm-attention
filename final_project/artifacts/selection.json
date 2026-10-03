@@ -1,0 +1,29 @@
+{
+ "rule": "selection uses LOBO validation results only (learning bearings); the 11 test bearings are not touched before this file is written",
+ "best_actionable_RUL_MAE": "cnn_bilstm_attn",
+ "best_detection_AUC_mean_h": "lstm",
+ "lowest_false_alarm_rate": "Gradient Boosting",
+ "interpretable_by_design": "proposed",
+ "models_beating_constant_on_overall_MAE": [],
+ "models_beating_constant_on_actionable_MAE": [
+  "Gradient Boosting",
+  "Random Forest",
+  "Ridge",
+  "cnn",
+  "cnn_bilstm",
+  "cnn_bilstm_attn",
+  "cnn_bilstm_dual",
+  "cnn_lstm",
+  "lstm",
+  "proposed"
+ ],
+ "epochs_by_model": {
+  "cnn": 3,
+  "lstm": 3,
+  "cnn_lstm": 4,
+  "cnn_bilstm": 3,
+  "cnn_bilstm_attn": 6,
+  "cnn_bilstm_dual": 3,
+  "proposed": 3
+ }
+}

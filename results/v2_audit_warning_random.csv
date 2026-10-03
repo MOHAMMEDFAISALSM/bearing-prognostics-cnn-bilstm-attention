@@ -1,0 +1,12 @@
+Bearing,phase_min,detected,lead_min,lead_%_of_phase,false_alarm_%_healthy,false_alarm_episodes,first_alarm_before_onset
+Bearing1_3,128.0,True,126.2,99.0,0.0,0,False
+Bearing1_4,56.5,True,56.3,100.0,0.0,0,False
+Bearing1_5,8.8,True,2.8,32.0,0.0,0,False
+Bearing1_6,5.7,True,4.3,76.0,0.8,1,True
+Bearing1_7,175.0,True,27.8,16.0,0.0,0,False
+Bearing2_3,1.2,True,1.0,86.0,1.9,3,True
+Bearing2_4,1.2,True,0.8,71.0,0.0,0,False
+Bearing2_5,1.5,False,,,6.7,20,True
+Bearing2_6,2.0,True,1.8,92.0,0.0,0,False
+Bearing2_7,1.0,True,0.5,50.0,0.0,0,False
+Bearing3_3,20.2,True,16.0,79.0,0.0,0,False

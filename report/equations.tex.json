@@ -1,0 +1,20 @@
+{
+ "eq_cap": "RUL_{\\mathrm{cap}} = 0.60 \\times \\max_{b \\in \\mathcal{B}_{\\mathrm{train}}} T_{\\mathrm{EOL}}(b) = 16{,}812\\ \\mathrm{s}",
+ "eq_target": "RUL_{c}(t) = \\min\\left( RUL_{\\mathrm{cap}},\\ \\max\\left(0,\\ T_{\\mathrm{EOL}} - t\\right) \\right)",
+ "eq_ynorm": "y_{\\mathrm{rul}}(t) = \\frac{RUL_{c}(t)}{RUL_{\\mathrm{cap}}} \\in [0, 1]",
+ "eq_stage": "s(t) = \\begin{cases} 0\\ (\\text{Normal}), & y_{\\mathrm{rul}}(t) > 0.40 \\\\ 1\\ (\\text{Warning}), & 0.15 < y_{\\mathrm{rul}}(t) \\le 0.40 \\\\ 2\\ (\\text{Critical}), & y_{\\mathrm{rul}}(t) \\le 0.15 \\end{cases}",
+ "eq_att": "\\begin{aligned} e_t &= \\mathbf{u}^{\\top} \\tanh\\left( \\mathbf{W}_a \\mathbf{h}_t + \\mathbf{b}_a \\right) \\\\ \\alpha_t &= \\frac{\\exp(e_t)}{\\sum_{k=1}^{16} \\exp(e_k)}, \\quad \\mathbf{c} = \\sum_{t=1}^{16} \\alpha_t \\mathbf{h}_t \\end{aligned}",
+ "eq_loss": "\\mathcal{L} = \\frac{1.0}{B} \\sum_{j=1}^{B} \\ell_{\\delta}\\left( y_{\\mathrm{rul},j} - \\hat{y}_{\\mathrm{rul},j} \\right) + \\frac{0.5}{B} \\sum_{j=1}^{B} \\left( -\\log \\hat{p}_{j, s_j} \\right)",
+ "eq_huber": "\\ell_{\\delta}(r) = \\begin{cases} \\frac{1}{2} r^{2}, & |r| \\le \\delta \\\\ \\delta \\left( |r| - \\frac{1}{2}\\delta \\right), & |r| > \\delta \\end{cases} \\qquad (\\delta = 1)",
+ "eq_denorm": "\\widehat{RUL} = \\mathrm{clip}\\left( \\hat{y}_{\\mathrm{rul}}, 0, 1 \\right) \\times RUL_{\\mathrm{cap}}\\ \\ [\\mathrm{s}]",
+ "eq_mae": "\\mathrm{MAE} = \\frac{1}{M} \\sum_{i=1}^{M} \\left| RUL_{c,i} - \\widehat{RUL}_i \\right|",
+ "eq_rmse": "\\mathrm{RMSE} = \\sqrt{\\frac{1}{M} \\sum_{i=1}^{M} \\left( RUL_{c,i} - \\widehat{RUL}_i \\right)^{2}}",
+ "eq_er": "\\%Er_i = 100 \\times \\frac{ActRUL_i - \\widehat{RUL}_i}{ActRUL_i}",
+ "eq_ai": "A_i = \\begin{cases} \\exp\\left( -\\ln(0.5) \\cdot \\%Er_i / 5 \\right), & \\%Er_i \\le 0 \\\\ \\exp\\left( +\\ln(0.5) \\cdot \\%Er_i / 20 \\right), & \\%Er_i > 0 \\end{cases}",
+ "eq_score": "\\mathrm{Score} = \\frac{1}{11} \\sum_{i=1}^{11} A_i, \\qquad T\\text{-}\\mathrm{Score} = \\frac{1}{M} \\sum_{i=1}^{M} A_i",
+ "eq_std": "z_{k,d} = \\frac{f_{k,d} - \\mu_{d}}{\\sigma_{d}}, \\qquad d = 1, \\ldots, 30",
+ "eq_window": "\\mathbf{X}_j = \\left[ \\mathbf{z}_{j-15}, \\mathbf{z}_{j-14}, \\ldots, \\mathbf{z}_{j} \\right] \\in \\mathbb{R}^{16 \\times 30}",
+ "eq_nmae": "\\mathrm{MAE}_{\\mathrm{norm}} = \\frac{1}{M} \\sum_{i=1}^{M} \\left| y_{\\mathrm{rul},i} - \\hat{y}_{\\mathrm{rul},i} \\right|",
+ "eq_prf": "P_c = \\frac{TP_c}{TP_c + FP_c}, \\qquad R_c = \\frac{TP_c}{TP_c + FN_c}, \\qquad F1_c = \\frac{2 P_c R_c}{P_c + R_c}",
+ "eq_ac": "\\mathrm{Accuracy} = \\frac{\\text{correctly classified windows}}{\\text{total windows}}"
+}

@@ -1,0 +1,15 @@
+step,metric,mean_diff,ci_lo,ci_hi,units_improved,verdict
+CNN -> CNN+LSTM (add recurrence),detection AUC at 10 min,-0.054595809475757436,-0.11042756182940715,-0.0019856873196778973,3/11,measurable degradation
+CNN -> CNN+LSTM (add recurrence),actionable RUL MAE (min),-0.39643331590455716,-6.18707856145114,3.5267862411695807,4/11,no measurable difference (CI includes 0)
+LSTM -> BiLSTM (make it bidirectional),detection AUC at 10 min,0.020077260495144134,-0.026276708938968673,0.07407874303366876,6/11,no measurable difference (CI includes 0)
+LSTM -> BiLSTM (make it bidirectional),actionable RUL MAE (min),-1.9762748919789466,-7.566858624138851,3.522991236647455,7/11,no measurable difference (CI includes 0)
+add attention (single head),detection AUC at 10 min,-0.023564410162674857,-0.07157132730460604,0.022296298035647158,4/11,no measurable difference (CI includes 0)
+add attention (single head),actionable RUL MAE (min),1.0993865350447718,-4.000190945817295,6.420898648925416,6/11,no measurable difference (CI includes 0)
+add second head (dual head),detection AUC at 10 min,0.06451050585186521,0.0017797204770253748,0.1381269643035857,8/11,measurable improvement
+add second head (dual head),actionable RUL MAE (min),-2.815935118635609,-11.651663381123575,3.415652085138144,4/11,no measurable difference (CI includes 0)
+add second head WITHOUT attention,detection AUC at 10 min,-0.00924371115960171,-0.0697302790657089,0.05438247786064906,5/11,no measurable difference (CI includes 0)
+add second head WITHOUT attention,actionable RUL MAE (min),-5.567406938942373,-14.46403716986457,1.5564900558716444,5/11,no measurable difference (CI includes 0)
+add attention to the dual-head model,detection AUC at 10 min,0.05018980684879206,0.012409417987161352,0.08721572694310407,9/11,measurable improvement
+add attention to the dual-head model,actionable RUL MAE (min),3.850858355351535,-2.7580608214175557,10.961168709421461,4/11,no measurable difference (CI includes 0)
+add CNN in front of the LSTM,detection AUC at 10 min,-0.025792443810219924,-0.08026840576583684,0.02109634244348486,4/11,no measurable difference (CI includes 0)
+add CNN in front of the LSTM,actionable RUL MAE (min),5.197620084125647,2.706584126024544,7.702749597534336,2/11,measurable degradation

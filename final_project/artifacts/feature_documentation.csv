@@ -1,0 +1,18 @@
+feature,formula,physical meaning / why it may indicate degradation,transform
+rms,sqrt(mean(x^2)),Overall vibration energy; grows as defects enlarge and friction/impacts increase.,log10
+peak,max|x|,Largest instantaneous shock; sensitive to single strong impacts (also to noise spikes).,log10
+p2p,max(x)-min(x),Total excursion; similar to peak but based on the signed range.,log10
+kurtosis,mean((x-mu)^4)/sigma^4 - 3,"Impulsiveness. About 0 for smooth Gaussian vibration, rises when sharp impacts appear (spalls, cracks).",signed log1p
+skewness,mean((x-mu)^3)/sigma^3,Asymmetry of the amplitude distribution; one-sided impacts change it.,signed log1p
+crest_factor,peak/rms,"Peak-to-average ratio; rises early with isolated impacts, falls when damage becomes continuous.",log10
+shape_factor,rms/mean|x|,Waveform shape; changes when the amplitude distribution departs from Gaussian.,log10
+impulse_factor,peak/mean|x|,Sharpness of impulses relative to the mean level.,log10
+margin_factor,peak/(mean(sqrt|x|))^2,Peak relative to a low-order mean; emphasises rare large peaks (classical incipient-fault indicator).,log10
+spec_energy,"sum(P_k), P=|FFT(x-mu)|^2/N^2",Total spectral power (Parseval: equals variance); tracks overall energy growth.,log10
+spec_centroid,sum(f_k P_k)/sum(P_k),Centre of gravity of the power spectrum; moves when high-frequency resonances are excited.,none
+spec_spread,sqrt(sum((f_k-fc)^2 P_k)/sum(P_k)),Bandwidth of the spectrum; broadens with damage.,none
+spec_peak_freq,argmax_f P(f),Dominant frequency (shaft harmonics vs structural resonance).,none
+band_0_1k,"sum(P_k, 0-1 kHz)/sum(P_k)",Fraction of power at low frequency (shaft rotation harmonics; shaft speed is 25-30 Hz).,log10(x+1e-6)
+band_1_3k,"sum(P_k, 1-3 kHz)/sum(P_k)",Mid band.,log10(x+1e-6)
+band_3_6k,"sum(P_k, 3-6 kHz)/sum(P_k)",Mid-high band.,log10(x+1e-6)
+band_6_12k,"sum(P_k, 6-12.8 kHz)/sum(P_k)","High band, where impact-excited resonances appear.",log10(x+1e-6)

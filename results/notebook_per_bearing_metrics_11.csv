@@ -1,0 +1,12 @@
+Bearing,Condition,Windows,RUL MAE (min),PHM T-Score,Stage Acc (%)
+Bearing1_3,Cond 1,2360,114.429,0.115,77.797
+Bearing1_4,Cond 1,1413,56.235,0.267,70.276
+Bearing1_5,Cond 1,2448,89.571,0.209,75.041
+Bearing1_6,Cond 1,2433,129.517,0.095,23.346
+Bearing1_7,Cond 1,2244,95.031,0.171,58.422
+Bearing2_3,Cond 2,1940,101.503,0.162,25.515
+Bearing2_4,Cond 2,736,54.119,0.189,42.391
+Bearing2_5,Cond 2,2296,82.851,0.23,69.948
+Bearing2_6,Cond 2,686,59.271,0.153,8.601
+Bearing2_7,Cond 2,215,69.784,0.0,12.093
+Bearing3_3,Cond 3,419,61.399,0.005,8.592

@@ -1,0 +1,22 @@
+step,metric,mean_diff,ci_lo,ci_hi,units_improved,verdict
+CNN -> CNN+LSTM (add recurrence),detection AUC (mean over horizons),0.04975285251036168,-0.024018773878803374,0.1344442596756632,4/6,no measurable difference (CI includes 0)
+CNN -> CNN+LSTM (add recurrence),actionable RUL MAE (min),-4.795943501463324,-9.675099830993075,-0.7723774300984498,4/6,measurable improvement
+CNN -> CNN+LSTM (add recurrence),stage macro-F1,0.0306526757559948,-0.020451925057070428,0.07758222022276356,5/6,no measurable difference (CI includes 0)
+LSTM -> BiLSTM (make it bidirectional),detection AUC (mean over horizons),0.020360379763371794,-0.015659808158048294,0.060279466169652775,3/6,no measurable difference (CI includes 0)
+LSTM -> BiLSTM (make it bidirectional),actionable RUL MAE (min),4.256794623445825,0.4221585418819173,9.57768662203712,2/6,measurable degradation
+LSTM -> BiLSTM (make it bidirectional),stage macro-F1,-0.010801081359239665,-0.037628998693060745,0.01684487183276773,2/6,no measurable difference (CI includes 0)
+add attention (single head),detection AUC (mean over horizons),-0.042265647582232224,-0.10267953453901414,0.0029449377789227036,2/6,no measurable difference (CI includes 0)
+add attention (single head),actionable RUL MAE (min),-5.067025887879931,-9.621156284775356,-1.8599216308583468,6/6,measurable improvement
+add attention (single head),stage macro-F1,0.0007948246794712843,-0.020593755766443473,0.023656476409948873,2/6,no measurable difference (CI includes 0)
+add second head (dual head),detection AUC (mean over horizons),0.016920677275203428,-0.03098367782089932,0.0705254001906868,4/6,no measurable difference (CI includes 0)
+add second head (dual head),actionable RUL MAE (min),5.412268628740942,0.0666454614456266,12.64719153774192,1/6,measurable degradation
+add second head (dual head),stage macro-F1,0.03596724610423569,-0.002911638352223652,0.07769024268270551,3/6,no measurable difference (CI includes 0)
+add second head WITHOUT attention,detection AUC (mean over horizons),-0.04596255187275383,-0.15179906428684745,0.03792908379961021,2/6,no measurable difference (CI includes 0)
+add second head WITHOUT attention,actionable RUL MAE (min),2.9184214869309453,-1.572469480250864,7.657200265504939,3/6,no measurable difference (CI includes 0)
+add second head WITHOUT attention,stage macro-F1,0.0025558678883667216,-0.08305648516603559,0.06348278780892926,4/6,no measurable difference (CI includes 0)
+add attention to the dual-head model,detection AUC (mean over horizons),0.020617581565725036,-0.04785164902135064,0.10298114674208647,2/6,no measurable difference (CI includes 0)
+add attention to the dual-head model,actionable RUL MAE (min),-2.5731787460699342,-6.990424009516407,0.9531358523382032,3/6,no measurable difference (CI includes 0)
+add attention to the dual-head model,stage macro-F1,0.03420620289534025,-0.0029448343755733852,0.08731990008549545,3/6,no measurable difference (CI includes 0)
+add CNN in front of the LSTM,detection AUC (mean over horizons),-0.03398130926574544,-0.12211925376996435,0.029091692743119655,3/6,no measurable difference (CI includes 0)
+add CNN in front of the LSTM,actionable RUL MAE (min),-3.8276389907711867,-13.133869523817152,2.4239966274041627,2/6,no measurable difference (CI includes 0)
+add CNN in front of the LSTM,stage macro-F1,-0.048250905098144996,-0.09840730769996175,-0.00013959828740526628,2/6,measurable degradation

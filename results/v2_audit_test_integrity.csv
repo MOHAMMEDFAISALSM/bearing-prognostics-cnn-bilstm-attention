@@ -1,0 +1,8 @@
+Item,Test bearings influenced it?,Detail
+"Onset rule design (smoothing 15/5, quantile 0.30, ""final excursion"", 10%)","YES, partially","While designing the rule I inspected health-indicator curves and onset fractions of ALL 17 bearings, including test bearings, and tried several rule variants. The 10% value was fixed before any v2 model was trained, but the rule was not designed blind."
+Decision to abandon the global-cap target,YES,Motivated by poor results of the OLD target on the test bearings (constant baseline beat the model).
+"RF hyper-parameters, 25 epochs, up-weighting cap 10, alarm rule of 3 windows",Partly,RF settings and the fixed-epoch idea come from earlier experiments that scored test bearings on the OLD target; they were not re-tuned in v2. Weight cap and alarm rule were set once without looking at v2 test output.
+"Architecture (CNN-BiLSTM-Attention, window 16)",No,"Inherited from the original notebook, which used bearing-level validation."
+Early stopping / model selection in v2,No,"None exists: fixed epochs, no checkpoint selection, every model reported."
+"Threshold selection for alarms (0.90 / 0.35, 3 windows)",No test tuning,Fixed a priori from the label definition; not tuned on any results.
+Number of times the v2 test set was scored,1 (plus this audit re-run),No model or setting was changed after seeing v2 test numbers.

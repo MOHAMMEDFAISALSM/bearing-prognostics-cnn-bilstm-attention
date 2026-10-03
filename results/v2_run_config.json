@@ -1,0 +1,46 @@
+{
+  "seed": 42,
+  "window": 16,
+  "epochs": 25,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "dropout": 0.2,
+  "conv_filters": 64,
+  "conv_kernel": 3,
+  "lstm_units": 64,
+  "shared_dense": 64,
+  "head_dense": 32,
+  "loss_weights": {
+    "rul": 1.0,
+    "risk": 0.5
+  },
+  "onset_fraction": 0.1,
+  "onset_smooth_window": 15,
+  "onset_end_smooth_window": 5,
+  "onset_baseline_quantile": 0.3,
+  "critical_stage_threshold": 0.35,
+  "regression_to_stage_thresholds": [
+    0.9,
+    0.35
+  ],
+  "degradation_weight_cap": 10,
+  "alarm_persistence_windows": 3,
+  "random_forest": {
+    "n_estimators": 200,
+    "min_samples_leaf": 5
+  },
+  "ridge_alpha": 1.0,
+  "test_seeds": [
+    42,
+    43,
+    44
+  ],
+  "versions": {
+    "python": "3.12.6",
+    "numpy": "2.2.6",
+    "pandas": "2.2.2",
+    "sklearn": "1.5.2",
+    "scipy": "1.14.1",
+    "tensorflow": "2.20.0"
+  }
+}

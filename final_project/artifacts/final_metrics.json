@@ -1,0 +1,259 @@
+{
+ "lobo": {
+  "Constant": {
+   "MAE_min": 40.31009673516288,
+   "MAE_min_actionable": 53.37313930354971,
+   "AUC_h10": 0.5,
+   "AUC_h60": 0.5,
+   "AUC_mean_h": 0.5,
+   "stage_macroF1": 0.24561393621738117,
+   "false_alarm_rate": 0.0,
+   "detected_bearings": 0.0,
+   "alarm_at_end_bearings": 0.0
+  },
+  "Ridge": {
+   "MAE_min": 55.53137443522303,
+   "MAE_min_actionable": 31.075770377599117,
+   "AUC_h10": 0.6029756134667164,
+   "AUC_h60": 0.7032544471433805,
+   "AUC_mean_h": 0.6148826956491678,
+   "stage_macroF1": 0.26665826390145675,
+   "false_alarm_rate": 0.5351849591301319,
+   "detected_bearings": 1.0,
+   "alarm_at_end_bearings": 1.0
+  },
+  "Random Forest": {
+   "MAE_min": 44.12484193009155,
+   "MAE_min_actionable": 38.90224531008136,
+   "AUC_h10": 0.7757817310058758,
+   "AUC_h60": 0.662067120272719,
+   "AUC_mean_h": 0.7174794234276547,
+   "stage_macroF1": 0.3419503869055715,
+   "false_alarm_rate": 0.36530292123801705,
+   "detected_bearings": 1.0,
+   "alarm_at_end_bearings": 0.6666666666666666
+  },
+  "Gradient Boosting": {
+   "MAE_min": 43.00722527826221,
+   "MAE_min_actionable": 39.679653380095864,
+   "AUC_h10": 0.7814686718435486,
+   "AUC_h60": 0.6703891472751967,
+   "AUC_mean_h": 0.7246469938580823,
+   "stage_macroF1": 0.3351035178531225,
+   "false_alarm_rate": 0.36182600701864415,
+   "detected_bearings": 1.0,
+   "alarm_at_end_bearings": 0.6666666666666666
+  },
+  "CNN": {
+   "MAE_min": 46.15232312913469,
+   "MAE_min_actionable": 28.946297305982956,
+   "AUC_h10": 0.8034601089320855,
+   "AUC_h60": 0.8348259673160631,
+   "AUC_mean_h": 0.802572416809277,
+   "stage_macroF1": 0.29442036452550063,
+   "false_alarm_rate": 0.5625499503032451,
+   "detected_bearings": 1.0,
+   "alarm_at_end_bearings": 0.9166666666666666
+  },
+  "LSTM": {
+   "MAE_min": 42.47722283388171,
+   "MAE_min_actionable": 27.97799279529082,
+   "AUC_h10": 0.939605381683592,
+   "AUC_h60": 0.8217423822823764,
+   "AUC_mean_h": 0.886306578585384,
+   "stage_macroF1": 0.3733239453796404,
+   "false_alarm_rate": 0.4537131365198776,
+   "detected_bearings": 1.0,
+   "alarm_at_end_bearings": 0.9166666666666666
+  },
+  "CNN + LSTM": {
+   "MAE_min": 43.1306270630594,
+   "MAE_min_actionable": 24.15035380451963,
+   "AUC_h10": 0.8834536551589869,
+   "AUC_h60": 0.8107911583530277,
+   "AUC_mean_h": 0.8523252693196386,
+   "stage_macroF1": 0.3250730402814954,
+   "false_alarm_rate": 0.5166919114010685,
+   "detected_bearings": 1.0,
+   "alarm_at_end_bearings": 1.0
+  },
+  "CNN + BiLSTM": {
+   "MAE_min": 46.737672795844304,
+   "MAE_min_actionable": 28.407148427965456,
+   "AUC_h10": 0.8926483908794219,
+   "AUC_h60": 0.8096553772269818,
+   "AUC_mean_h": 0.8726856490830105,
+   "stage_macroF1": 0.31427195892225573,
+   "false_alarm_rate": 0.536902785530093,
+   "detected_bearings": 1.0,
+   "alarm_at_end_bearings": 0.9166666666666666
+  },
+  "CNN + BiLSTM + Attention (single head)": {
+   "MAE_min": 44.921907185661325,
+   "MAE_min_actionable": 23.340122540085527,
+   "AUC_h10": 0.8480075553542966,
+   "AUC_h60": 0.7893317223521429,
+   "AUC_mean_h": 0.8304200015007782,
+   "stage_macroF1": 0.31506678360172696,
+   "false_alarm_rate": 0.5855600873706387,
+   "detected_bearings": 1.0,
+   "alarm_at_end_bearings": 1.0
+  },
+  "CNN + BiLSTM (dual head, no attention)": {
+   "MAE_min": 47.17188111547845,
+   "MAE_min_actionable": 31.325569914896402,
+   "AUC_h10": 0.8788666807557014,
+   "AUC_h60": 0.7472919477601897,
+   "AUC_mean_h": 0.8267230972102567,
+   "stage_macroF1": 0.31682782681062244,
+   "false_alarm_rate": 0.5061210997377342,
+   "detected_bearings": 1.0,
+   "alarm_at_end_bearings": 1.0
+  },
+  "PROPOSED: CNN + BiLSTM + Attention (dual head)": {
+   "MAE_min": 45.51044660298368,
+   "MAE_min_actionable": 28.752391168826474,
+   "AUC_h10": 0.8697475037030137,
+   "AUC_h60": 0.808875607027631,
+   "AUC_mean_h": 0.8473406787759816,
+   "stage_macroF1": 0.3510340297059627,
+   "false_alarm_rate": 0.5229360695229242,
+   "detected_bearings": 1.0,
+   "alarm_at_end_bearings": 1.0
+  }
+ },
+ "test": {
+  "Constant": {
+   "MAE_min": 35.62273112832763,
+   "MAE_min_actionable": 56.35371656017183,
+   "AUC_h10": 0.5,
+   "AUC_h60": 0.5,
+   "AUC_mean_h": 0.5,
+   "stage_macroF1": 0.29090667021701505,
+   "false_alarm_rate": 0.0,
+   "detected_bearings": 0.0,
+   "alarm_at_end_bearings": 0.0,
+   "PHM_official": 0.12381602548137663
+  },
+  "Ridge": {
+   "MAE_min": 39.06648304388751,
+   "MAE_min_actionable": 45.21602911262499,
+   "AUC_h10": 0.6641206473779651,
+   "AUC_h60": 0.5850012686345663,
+   "AUC_mean_h": 0.6396717535613945,
+   "stage_macroF1": 0.422095163274596,
+   "false_alarm_rate": 0.198060449836645,
+   "detected_bearings": 8.0,
+   "alarm_at_end_bearings": 7.0,
+   "PHM_official": 0.03984492265320582
+  },
+  "Random Forest": {
+   "MAE_min": 32.64003345346918,
+   "MAE_min_actionable": 32.713067375405,
+   "AUC_h10": 0.6539956238238224,
+   "AUC_h60": 0.7682568316104371,
+   "AUC_mean_h": 0.6956725787937611,
+   "stage_macroF1": 0.4274573386360871,
+   "false_alarm_rate": 0.29559897205961655,
+   "detected_bearings": 11.0,
+   "alarm_at_end_bearings": 9.666666666666666,
+   "PHM_official": 0.07835119139066143
+  },
+  "Gradient Boosting": {
+   "MAE_min": 30.14616743608484,
+   "MAE_min_actionable": 32.650884067335525,
+   "AUC_h10": 0.6938741180961889,
+   "AUC_h60": 0.7778339620654329,
+   "AUC_mean_h": 0.7246167714835606,
+   "stage_macroF1": 0.4705581389665428,
+   "false_alarm_rate": 0.2365489442473024,
+   "detected_bearings": 11.0,
+   "alarm_at_end_bearings": 10.0,
+   "PHM_official": 0.03660158998268568
+  },
+  "CNN": {
+   "MAE_min": 27.805773940278822,
+   "MAE_min_actionable": 42.57508530127528,
+   "AUC_h10": 0.7514465455555474,
+   "AUC_h60": 0.6939324626298023,
+   "AUC_mean_h": 0.7316323479003858,
+   "stage_macroF1": 0.45363886959665595,
+   "false_alarm_rate": 0.1455823938565264,
+   "detected_bearings": 10.0,
+   "alarm_at_end_bearings": 10.0,
+   "PHM_official": 0.18119402345997404
+  },
+  "LSTM": {
+   "MAE_min": 32.32444800125646,
+   "MAE_min_actionable": 36.778759475120246,
+   "AUC_h10": 0.738914563924108,
+   "AUC_h60": 0.7097384757714735,
+   "AUC_mean_h": 0.7276506718143381,
+   "stage_macroF1": 0.4496079186588713,
+   "false_alarm_rate": 0.20824385062197,
+   "detected_bearings": 10.333333333333334,
+   "alarm_at_end_bearings": 10.333333333333334,
+   "PHM_official": 0.1434355835444728
+  },
+  "CNN + LSTM": {
+   "MAE_min": 30.610315064094532,
+   "MAE_min_actionable": 42.0546930941446,
+   "AUC_h10": 0.7191965192483231,
+   "AUC_h60": 0.7082354463412792,
+   "AUC_mean_h": 0.7151948593369953,
+   "stage_macroF1": 0.42271396642709225,
+   "false_alarm_rate": 0.18240272487762407,
+   "detected_bearings": 10.0,
+   "alarm_at_end_bearings": 10.0,
+   "PHM_official": 0.22056988269623723
+  },
+  "CNN + BiLSTM": {
+   "MAE_min": 34.20508927304425,
+   "MAE_min_actionable": 40.09226133065815,
+   "AUC_h10": 0.7368758152180565,
+   "AUC_h60": 0.7028635402670463,
+   "AUC_mean_h": 0.7248482323478792,
+   "stage_macroF1": 0.41016082448484803,
+   "false_alarm_rate": 0.22471500251302334,
+   "detected_bearings": 10.0,
+   "alarm_at_end_bearings": 9.666666666666666,
+   "PHM_official": 0.10554494108106054
+  },
+  "CNN + BiLSTM + Attention (single head)": {
+   "MAE_min": 32.335529925039445,
+   "MAE_min_actionable": 41.183656821438035,
+   "AUC_h10": 0.7264378427586612,
+   "AUC_h60": 0.7058071979984829,
+   "AUC_mean_h": 0.7151805875593231,
+   "stage_macroF1": 0.43265177326551435,
+   "false_alarm_rate": 0.2016280348454156,
+   "detected_bearings": 9.666666666666666,
+   "alarm_at_end_bearings": 9.0,
+   "PHM_official": 0.1791505863545277
+  },
+  "CNN + BiLSTM (dual head, no attention)": {
+   "MAE_min": 35.04742467687352,
+   "MAE_min_actionable": 34.109643769157884,
+   "AUC_h10": 0.7410334426000836,
+   "AUC_h60": 0.7689132369649793,
+   "AUC_mean_h": 0.7475529791927702,
+   "stage_macroF1": 0.3990325548256728,
+   "false_alarm_rate": 0.27738126398099433,
+   "detected_bearings": 10.0,
+   "alarm_at_end_bearings": 8.666666666666666,
+   "PHM_official": 0.09262483519552228
+  },
+  "PROPOSED: CNN + BiLSTM + Attention (dual head)": {
+   "MAE_min": 29.59217072079041,
+   "MAE_min_actionable": 38.07181855843877,
+   "AUC_h10": 0.7586148206336737,
+   "AUC_h60": 0.7487368010142693,
+   "AUC_mean_h": 0.748802103922466,
+   "stage_macroF1": 0.46831667896424145,
+   "false_alarm_rate": 0.17231604307447337,
+   "detected_bearings": 9.666666666666666,
+   "alarm_at_end_bearings": 8.333333333333334,
+   "PHM_official": 0.14621442116433
+  }
+ }
+}

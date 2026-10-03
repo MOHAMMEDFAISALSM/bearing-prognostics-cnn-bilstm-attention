@@ -4,10 +4,12 @@ import json
 import os
 import re
 import subprocess
+import sys
 import tempfile
 import zipfile
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+# optional argument: folder holding equations.tex.json (default: this folder)
+HERE = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
 eqs = json.load(open(os.path.join(HERE, "equations.tex.json"), encoding="utf-8"))
 with tempfile.TemporaryDirectory() as tmp:
     md, out = os.path.join(tmp, "eqs.md"), os.path.join(tmp, "eqs.docx")

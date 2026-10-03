@@ -1,0 +1,5 @@
+Model,MAE_all_windows,MAE_pre_onset(healthy),MAE_degradation_phase,MAE_per_bearing_macro,MAE_degradation_macro_per_bearing,Skill_vs_constant_(all),Skill_vs_constant_(degradation)
+Constant (train mean),0.259,0.251,0.313,0.259,0.327,0.0,0.0
+Random Forest (last snapshot),0.054,0.01,0.322,0.047,0.283,0.793,-0.028
+CNN,0.06,0.022,0.293,0.056,0.264,0.769,0.066
+PROPOSED: CNN + BiLSTM + Attention (dual head),0.124,0.1,0.275,0.121,0.254,0.52,0.122
